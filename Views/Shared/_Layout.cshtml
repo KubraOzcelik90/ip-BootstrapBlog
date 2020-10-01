@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar  navbar-dark bg-success ">
+        <div class="container">
+            <a href="index.php" class="navbar-brand">KİŞİSEL BLOG</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuac">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuac">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> ANASAYFA</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i>FOTOĞRAFLAR</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active"><i class="fa fa-home" aria-hidden="true"></i> BİLGİELRİM</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> ÖRNEK SAYFA</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
